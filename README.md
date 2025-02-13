@@ -1,4 +1,8 @@
 # STM32F103C6T6 ve Arduino Uno ile SPI Haberleşmesi
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <img src="screenshoot/spi_prootcol.jpg" alt="SPI Protocol" width="48%">
+    <img src="screenshoot/uno_terminal.png" alt="Uno Terminal">
+</div>
 
 ## Proje Açıklaması
 Bu projede, bir Arduino Uno ile bir STM32F103C6T6 mikrodenetleyicisi arasında özel olarak yazılmış bir SPI protokolü kullanarak veri alışverişi gerçekleştirilmiştir. Arduino üzerindeki numpad aracılığıyla bir sayı girilir ve `#` tuşuna basıldığında bu sayı, SPI üzerinden STM32F103C6T6'ye gönderilir. STM32F103C6T6, sayının tek mi çift mi olduğunu belirler ve LED yakarak durumunu gösterir:
@@ -56,24 +60,29 @@ STM32 mikrodenetleyicime **ST-Link V2** programlayıcısını kullanarak kod yü
 - "Connect" ile mikrodenetleyiciyi tanıttım.  
 - HEX dosyasını seçip **"Program & Verify"** ile STM32'ye yükledim.  
 
-## Görseller
+## STM32 kodunu build edip oluşan hex dosyasını  ST-Link ile STM32'ye kaydetme
 
-<video width="600" autoplay loop muted>
-  <source src="https://github.com/MehmetNurKavan/spi_protocol/spi_protocol/screenshoot/spi_protocol.mp4" type="video/mp4">
-  Tarayıcınız video etiketini desteklemiyor.
-</video>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+    <img src="screenshoot/stlink_usb.jpg" alt="ST-Link" width="40%">
+    <img src="screenshoot/STM32F103C6T6.webp" alt="STM32F103C6T6" width="48%">
+    <img src="screenshoot/stm32_build.png" alt="build" class="responsive-img">
+    <img src="screenshoot/stm32_hex.png" alt="hex" class="responsive-img">
+    <img src="screenshoot/utility.png" alt="STM32 Utility" class="responsive-img">
+    <img src="screenshoot/utility_connect.png" alt="utility connect" class="responsive-img">
+    <img src="screenshoot/utility_program.png" alt="utility program" class="responsive-img">
+    <img src="screenshoot/utility_path.png" alt="utility path" class="responsive-img">
+    <img src="screenshoot/utility_succesfull.png" alt="utility succesfull" class="responsive-img">
+</div>
 
-![SPI Protocol](spi_protocol/screenshoot/spi_protocol.jpg)
-![ST-Link](spi_protocol/screenshoot/stlink_usb.jpg)
-![STM32F103C6T6](spi_protocol/screenshoot/STM32F103C6T6.webp)
-![Uno Terminal](spi_protocol/screenshoot/uno_terminal.png)
+<style>
+    .responsive-img {
+        width: 40%;
+    }
 
-STM32 kodunu build etme ve hex oluşturma
-![build](spi_protocol/screenshoot/stm32_build.png)
-![hex](spi_protocol/screenshoot/stm32_hex.png)
+    @media (max-width: 600px) {
+        .responsive-img {
+            width: 100%;
+        }
+    }
+</style>
 
-![STM32 Utility](spi_protocol/screenshoot/utiliy.png)
-![utility connect](spi_protocol/screenshoot/utiliy_connect.png)
-![utility program](spi_protocol/screenshoot/utiliy_program.png)
-![utility path](spi_protocol/screenshoot/utiliy_path.png)
-![utility succesfull](spi_protocol/screenshoot/utiliy_succesfull.png)
