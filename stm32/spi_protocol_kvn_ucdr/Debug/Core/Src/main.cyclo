@@ -1,0 +1,8 @@
+../Core/Src/main.c:61:6:SPI_GPIO_Init	1
+../Core/Src/main.c:92:9:SPI_Receive	5
+../Core/Src/main.c:117:6:SPI_Send	3
+../Core/Src/main.c:130:9:SPI_CheckSlaveSelect	1
+../Core/Src/main.c:140:5:main	4
+../Core/Src/main.c:182:6:SystemClock_Config	3
+../Core/Src/main.c:213:13:MX_GPIO_Init	1
+../Core/Src/main.c:250:6:Error_Handler	1
